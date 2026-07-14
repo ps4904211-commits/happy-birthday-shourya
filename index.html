@@ -1,16 +1,153 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Happy Birthday Shourya ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Meri Pyari Pari ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#000;
+overflow:hidden;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+
+.container{
+z-index:2;
+position:relative;
+padding:20px;
+}
+
+h1{
+font-size:40px;
+color:white;
+margin-bottom:10px;
+animation:glow 2s infinite;
+}
+
+h2{
+font-size:22px;
+color:#ff5c8d;
+margin-bottom:25px;
+}
+
+button{
+
+padding:16px 40px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:#ff5c8d;
+color:white;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+@keyframes glow{
+
+0%{
+text-shadow:0 0 10px #ff5c8d;
+}
+
+50%{
+text-shadow:0 0 35px #ff5c8d;
+}
+
+100%{
+text-shadow:0 0 10px #ff5c8d;
+}
+
+}
+
+.heart{
+
+position:absolute;
+color:#ff4d6d;
+font-size:22px;
+animation:fall linear infinite;
+
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-100vh);
+opacity:1;
+}
+
+100%{
+
+transform:translateY(100vh);
+opacity:0;
+
+}
+
+}
+
+</style>
+
 </head>
 
-<body style="background:black;color:white;text-align:center;font-family:Arial;padding-top:120px;">
+<body>
 
-<h1>🎂 Happy Birthday Shourya ❤️</h1>
+<div class="container">
 
-<p>This website is made with lots of love...</p>
+<h1>🎂 Happy Birthday</h1>
 
-<p>More surprises are coming soon... ✨</p>
+<h2>❤️ Meri Pyari Pari ❤️</h2>
+
+<button onclick="start()">Tap Here 💌</button>
+
+</div>
+
+<script>
+
+function start(){
+
+alert("Welcome My Favourite Person ❤️");
+
+}
+
+for(let i=0;i<35;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(3+Math.random()*5)+"s";
+
+heart.style.fontSize=(15+Math.random()*30)+"px";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
 
 </body>
-</html>
+  </html>
