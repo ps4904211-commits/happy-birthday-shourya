@@ -104,7 +104,12 @@ opacity:0;
 }
 
 }
-
+#line1,#line2{
+margin-top:15px;
+font-size:18px;
+color:#ffd6e7;
+animation:glow 2s infinite;
+}
 </style>
 
 </head>
@@ -120,12 +125,18 @@ opacity:0;
 <button onclick="start()">Tap Here 💌</button>
 
 </div>
+<p id="line1">✨ Aaj ka din sirf tumhare liye hai ✨</p>
 
+<p id="line2">
+Tum meri sabse special person ho ❤️
+</p>
 <script>
 
 function start(){
 
-alert("Welcome My Favourite Person ❤️");
+document.getElementById("line1").innerHTML="🎂 Happy Birthday Shourya 🎂";
+
+document.getElementById("line2").innerHTML="❤️ I hope tumhari har wish puri ho... aur tum hamesha smile karte raho ❤️";
 
 }
 
