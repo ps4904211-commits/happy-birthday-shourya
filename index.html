@@ -211,12 +211,34 @@ transform:translateY(0);
 }
 
 }
+button{
+margin:12px;
+padding:12px 24px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ff4d88;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+background:#ff7eb3;
+}
 </style>
 
 </head>
 
 <body>
+<!-- 🎵 Background Music -->
 
+<audio id="bgMusic" loop>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
 <div class="container">
 <div id="intro">
 <h1>🌻 Happy Birthday Shourya 🌻</h1>
@@ -227,6 +249,22 @@ transform:translateY(0);
 <h2>❤️ Meri Pyari Pari ❤️</h2>
 
 <button onclick="start()">Tap Here 💌</button>
+button{
+margin:12px;
+padding:12px 24px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ff4d88;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+background:#ff7eb3;
+}
 <div class="gallery">
 <img id="photoSlider"
 src="photo1.jpg"
@@ -284,7 +322,7 @@ Tum meri sabse special person ho ❤️
 <script>
 
 function start(){
-
+document.getElementById("bgMusic").play();
 document.getElementById("line1").innerHTML="🎂 Happy Birthday Shourya 🎂";
 
 document.getElementById("line2").innerHTML="❤️ I hope tumhari har wish puri ho... aur tum hamesha smile karte raho ❤️";
@@ -344,6 +382,21 @@ currentPhoto=0;
 document.getElementById("photoSlider").src=photos[currentPhoto];
 
 },3000);
+function toggleMusic(){
+
+const music=document.getElementById("bgMusic");
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+
+}
+
+}
 </script>
 
 </body>
