@@ -273,45 +273,7 @@ alt="Our Memories">
 <div class="love-letter">
 
 <h2>💌 Letter For Shourya 💌</h2>
-
-<p>
-
-Dear Shourya,
-
-Happy Birthday meri jaan. ❤️
-
-Tum meri life ki sabse khoobsurat wajah ho.
-
-Tum gussa bahut karte ho...
-lekin uske baad jitna pyaar karte ho,
-utna shayad duniya me koi nahi karta.
-
-Mujhe hamari height difference bahut pasand hai.
-
-Jab main tumhe hug karti hoon,
-tab mujhe lagta hai ki meri saari tension
-ek second me khatam ho gayi.
-
-Aur jab tum mujhe kiss karte ho...
-
-Us feeling ko words me explain karna impossible hai.
-
-Bas itna jaanti hoon...
-
-Tum ho,
-to meri duniya complete hai.
-
-Tumhare bina meri life adhuri hai.
-
-Aur agar tum meri life me ho,
-to mujhe aur kuch nahi chahiye.
-
-I Love You Forever ❤️
-
-— Pragya 🌻
-
-</p>
-
+<p id="loveText"></p>
 </div>
 </div>
 <p id="line1">✨ Aaj ka din sirf tumhare liye hai ✨</p>
@@ -382,6 +344,55 @@ currentPhoto=0;
 document.getElementById("photoSlider").src=photos[currentPhoto];
 
 },3000);
+const message = `Dear Shourya,
+
+Happy Birthday meri jaan. ❤️
+
+Tum meri life ki sabse khoobsurat wajah ho.
+
+Tum gussa bahut karte ho...
+lekin uske baad jitna pyaar karte ho,
+utna shayad duniya me koi nahi karta.
+
+Mujhe hamari height difference bahut pasand hai.
+
+Jab main tumhe hug karti hoon,
+tab mujhe lagta hai ki meri saari tension,
+saari problems,
+ek second me khatam ho gayi.
+
+Aur jab tum mujhe kiss karte ho...
+Us feeling ko words me explain karna impossible hai.
+
+Bas itna jaanti hoon...
+
+Tum ho,
+to meri duniya complete hai.
+
+Tumhare bina meri life adhuri hai.
+
+Aur agar tum meri life me ho,
+to mujhe aur kuch nahi chahiye.
+
+Thank you...
+har smile ke liye,
+har hug ke liye,
+har memory ke liye.
+
+I Love You Forever ❤️
+
+- Pragya 🌻`;
+
+let i = 0;
+
+const typing = setInterval(function () {
+    if (i < message.length) {
+        document.getElementById("loveText").innerHTML += message.charAt(i);
+        i++;
+    } else {
+        clearInterval(typing);
+    }
+}, 40);
 function toggleMusic(){
 
 const music=document.getElementById("bgMusic");
